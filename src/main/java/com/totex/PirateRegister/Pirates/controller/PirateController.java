@@ -1,15 +1,34 @@
 package com.totex.PirateRegister.Pirates.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping
 public class PirateController {
 
-    @GetMapping("/test")
+    @GetMapping("/get-pirates")
     public String welcome() {
         return "Test message";
     }
+
+    @PostMapping("/create-pirate")
+    public String createPirate() {
+        return "pirate created";
+    }
+
+    @GetMapping("get-pirate/{id}")
+    public String getPirateById(@PathVariable("id") Long id) {
+        return "Pirate: ";
+    }
+
+    @PutMapping("update-pirate/{id}")
+    public String updatePirate(@PathVariable("id") Long id) {
+        return "Pirate id: " + id +  " updated";
+    }
+
+    @DeleteMapping("delete-pirate/{id}")
+    public String deletePirate(@PathVariable("id") Long id) {
+        return "Pirate id: " + id + " deleted";
+    }
+
 }
