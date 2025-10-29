@@ -20,4 +20,9 @@ public class CrewController {
     public String getPirateById(@PathVariable("id") Long id) {
         return "Pirate: ";
     }
+
+    @PutMapping("update-pirate/{id}")
+    public String updatePirate(@PathVariable("id") Long id) {
+        return "Pirate id: " + id +  " updated";
+    }
 }
