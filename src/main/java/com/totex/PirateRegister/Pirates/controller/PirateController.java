@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 public class PirateController {
 
     @GetMapping("/get-pirates")
-    public String welcome() {
+    public String getAllPirates() {
         return "Test message";
     }
 
