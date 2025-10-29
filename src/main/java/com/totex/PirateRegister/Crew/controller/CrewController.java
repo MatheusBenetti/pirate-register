@@ -1,6 +1,7 @@
 package com.totex.PirateRegister.Crew.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,5 +12,10 @@ public class CrewController {
     @GetMapping("/get-crews")
     public String getAllCrews() {
         return "Return crews";
+    }
+
+    @PostMapping("/create-crew")
+    public String createCrew() {
+        return "Crew created";
     }
 }
