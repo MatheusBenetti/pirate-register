@@ -25,4 +25,10 @@ public class CrewController {
     public String updatePirate(@PathVariable("id") Long id) {
         return "Pirate id: " + id +  " updated";
     }
+
+    @DeleteMapping("delete-pirate/{id}")
+    public String deletePirate(@PathVariable("id") Long id) {
+        return "Pirate id: " + id + " deleted";
+    }
+
 }
